@@ -7,7 +7,7 @@ This project that will sync your Notion tasks to your Habitica account like crea
 Download or clone the repo :
 
 ```bash
-gh repo clone vandaref/from_notion_to_habitica
+git clone https://github.com/vandaref/from_notion_to_habitica.git
 ```
 
 ### Habitica
@@ -31,7 +31,7 @@ Update the values in the script depending on your own API etc.
 
 Start the script. 
 I suggest to make a cron in order to execute the script few times in a day. (cf. [How to create a cron](https://help.dreamhost.com/hc/en-us/articles/215767047-Creating-a-custom-Cron-Job))
-```
+```bash
 python3 from_notion_to_habitica.py
 ```
 
