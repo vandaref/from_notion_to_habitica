@@ -40,7 +40,7 @@ Your tasks must follow those properties guidelines :
   * Name : Status
   * Type : select
   * Values : Completed, etc. (*one of then must be Completed*)
-  * 
+    
 In order to respect this part of the code :
 ```python
 for i in data['results']:
