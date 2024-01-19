@@ -43,7 +43,7 @@ def readHabiticaData(headersHabitica):
     # print(res.text)
 
     with open('./habitica.json', 'w', encoding='utf8') as f:
-        json.dump(data, f, ensure_ascii=False)
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 def readHabiticaDoneData(headersHabitica):
     url = "https://habitica.com/api/v3/tasks/user?type=completedTodos"
@@ -54,7 +54,7 @@ def readHabiticaDoneData(headersHabitica):
     # print(res.text)
 
     with open('./habitica_done.json', 'w', encoding='utf8') as f:
-        json.dump(data, f, ensure_ascii=False)
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 def createTodoInHabitica(name, priority, headersHabitica):
     if priority == "Low":
