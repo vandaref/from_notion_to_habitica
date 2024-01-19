@@ -23,7 +23,31 @@ git clone https://github.com/vandaref/from_notion_to_habitica.git
   * Try to share your database and copy the link
   * https://www.notion.so/yourusername/**XXXXXXXXXXXXXXXXXXX**?v=...
 4. Finally, in Notion, select the database that you want to sync with Habitica. Look for Connections (in settings) and choose the integration that you created.
+
+## Notion Requirements
+
+Your tasks must follow those properties guidelines :
+* Property : Name 
+  * Name : Name
+  * Type : title
+
+* Property : Priotity 
+  * Name : Priority
+  * Type : select
+  * Values : Low, Medium, High
  
+* Property : Status 
+  * Name : Status
+  * Type : select
+  * Values : Completed, etc. (*one of then must be Completed*)
+  * 
+In order to respect this part of the code :
+```python
+for i in data['results']:
+        name = i['properties']['Name']['title'][0]['text']['content']
+        status = i['properties']['Status']['select']['name']
+        priority = i['properties']['Priority']['select']['name']
+```
 ## Setup
 Update the values in the script depending on your own API etc.
 
